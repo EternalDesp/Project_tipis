@@ -9,7 +9,6 @@ feature_names = joblib.load('feature_names.pkl')
 
 # Заголовок приложения
 st.title("Total Price Prediction")
-st.write("Введите данные транзакции, чтобы получить предсказанную стоимость.")
 
 # Ввод данных пользователем
 st.sidebar.header("Input Features")
@@ -72,5 +71,5 @@ input_data = input_data[feature_names]
 prediction = rf_model.predict(input_data)
 
 # Вывод результата
-st.subheader("Результат работы:")
+st.subheader("Predicted result:")
 st.write(f"**Predicted Total:** {prediction[0]:.2f}")
